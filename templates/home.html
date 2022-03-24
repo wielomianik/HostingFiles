@@ -10,8 +10,8 @@
 <body>
     <section>
         {% block content %}
-            {% for path in filesPaths %}
-                <a href="{{path}}" download>{{path}}</a>
+            {% for key, value in filesPaths.items() %}
+                <a href="{{value}}" download>{{key}}</a>
             {% endfor %}
         {% endblock %}
     </section>
